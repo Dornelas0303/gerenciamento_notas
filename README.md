@@ -1,5 +1,6 @@
-gerenciamento de notas
+# Gerenciamento de Notas
 
+## Funcionalidades
 - cadastrar notas 
 - atualizar notas
 - excluir notas
