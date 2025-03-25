@@ -13,7 +13,7 @@ def exibir_arquivo(alunos):
         print(f"Nota 1: {aluno[1]}")
         print(f"Nota 2: {aluno[2]}")
         print(f"Nota 3: {aluno[3]}")
-        print(f"Nota 4:  {aluno[4]}")
+        print(f"Nota 4: {aluno[4]}")
 
 conteudo=ler_arquivo()
 conteudo_2=[]
