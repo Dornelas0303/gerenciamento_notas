@@ -20,7 +20,21 @@ def exibir_arquivo(alunos):
         print(f"Nota 3: {verificar_nota(aluno[3])}")
         print(f"Nota 4: {verificar_nota(aluno[4])}")
         
-def alterar_nota():
+def alterar_nota(lista_alunos):
+    nome_aluno = input("Digite o nome do aluno: ")
+    for aluno in lista_alunos:
+        if aluno[0] == nome_aluno:
+            print(f"Notas atuais de {nome_aluno}: {aluno[1]}")
+
+            for i in range(1, 5):
+                nova_nota = input(f"Digite a nota atualizada: {i} : ")
+                if nova_nota:
+                    aluno[i] = nova_nota
+            
+            print(f"Notas atualizadas de {nome_aluno}: {aluno[1]}")
+            return 
+    
+    print("Aluno não encontrado.Digite outro nome: ")
 
 conteudo=ler_arquivo()
 lista_alunos=[]
@@ -42,8 +56,7 @@ if opcao== "2":
     novo_aluno=input("Digite o nome do aluno: ")
     escrever_arquivo(f"{novo_aluno};;;;")
 if opcao== "3":
-    nome_aluno=input("Digite o nome do aluno: ")
-    nota_1=input("Digite a nota: ")
+    alterar_nota(lista_alunos)
     #nota_2=input("Digite a nota: ")
     #nota_3=input("Digite a nota: ")
     #nota_4=input("Digite a nota: ")
